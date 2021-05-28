@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="name" type="String" />
+        <variable
+            name="workplace" type="String" />
+        <variable
+            name="address" type="String" />
+        <variable
+            name="photos" type="String"/>
+        <variable
+            name="follower" type="String" />
+        <variable
+            name="follows" type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:background="#60DFF1FA"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/n1"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:background="@drawable/abc_vector_test"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/n11"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:background="@android:drawable/ic_menu_compass"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/n2"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:text="MY Profile"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="@id/n1"
+            app:layout_constraintTop_toBottomOf="@id/n1" />
+
+        <Button
+            android:id="@+id/n3"
+            android:layout_width="75dp"
+            android:layout_height='75dp'
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_launcher_foreground"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/n2" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{name}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/n3" />
+
+        <TextView
+            android:id="@+id/workplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{workplace}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@{address}"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workplace" />
+
+        <TextView
+            android:id="@+id/n72"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:hint="Photos"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/n71"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <TextView
+            android:id="@+id/n71"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:hint="Follower"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/n7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/n72"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <TextView
+            android:id="@+id/n7"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:hint="Follows"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/n71"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+        <TextView
+            android:id="@+id/photos"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{photos}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/n71"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/n72"/>
+        <TextView
+            android:id="@+id/follower"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@{follower}"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/n7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/n72"
+            app:layout_constraintTop_toBottomOf="@id/n71" />
+        <TextView
+            android:id="@+id/follows"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@{follows}"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/n71"
+            app:layout_constraintTop_toBottomOf="@id/n7"/>
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="photos,follows,follower"></androidx.constraintlayout.widget.Group>
+        <ImageButton
+            android:id="@+id/n9"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:background="@mipmap/ic_launcher"
+            app:layout_constraintTop_toBottomOf="@id/photos"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:id="@+id/n91"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/ic_launcher_foreground"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/follower" />
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="28dp"
+            android:background="@android:drawable/ic_menu_myplaces"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/n91" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
